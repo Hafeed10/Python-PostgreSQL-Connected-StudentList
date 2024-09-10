@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Load static files first -->
+    {% load static %}
+    
+    <!-- Correct usage of the static template tag -->
+    <link rel="stylesheet" href="{% static '../static/css/style.css' %}">  <!-- for static file -->
+
+    <title >Student Data</title>
+</head>
+
+<style>
+    .max{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+        background-color: lightblue;
+        flex-direction: column;
+        font-family: Arial, sans-serif;
+        font-size: 24px;
+        text-align: center;
+        color: white;
+        padding: 20px;
+        margin: 0;
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+        transition: background-color 0.5s ease-in-out;
+    }
+    .loop{
+        {% comment %} width: 100%; {% endcomment %}
+        display: flex;
+        gap: 20px;
+        font-size:15px;
+        margin-top:50px;
+        font-family: "monospace";
+        justify-content:center;
+        align-items: center;
+        background-color: #F5F5F5;
+        border-radius: 5px;
+        padding: 20px;
+        box-sizing: border-box;
+        transition: background-color 0.5s ease-in-out;
+    }
+    .car{
+        display: flex;
+        gap: 20px;
+        font-size:15px;
+        margin-top:50px;
+        font-family: "monospace";
+        justify-content:center;
+        align-items: center;
+    }
+   
+</style>
+
+<body>
+    
+    <h1 class="max">Student Data</h1>
+
+    <div class='car'>
+   
+        <!-- Loop through the "obj" context object and display the student data -->
+        {% for x in obj %}
+       <div class='loop'>
+        <div class='row'>
+            {{ x.name }}
+        </div>
+   
+        <div class='row'>
+            {{ x.des }}
+        </div>
+       </div>
+        {% endfor %}
+    </div>
+    
+</body>
+</html>

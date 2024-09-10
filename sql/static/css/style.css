@@ -1,0 +1,34 @@
+.max{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    background-color: lightblue;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.5s ease-in-out;
+}
+.car{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size:15px;
+    margin-top:50px;
+    font-family: "monospace";
+    justify-content: space-around;
+    /* {% comment %} justify-content: ; {% endcomment %} */
+    align-items: center;
+}
+.row{
+   
+}
